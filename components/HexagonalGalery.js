@@ -1,6 +1,6 @@
 import React from 'react'
 import Link from 'next/link'
-
+import Image from 'next/image';
 
 const mockups = [
     {
@@ -15,185 +15,36 @@ const mockups = [
     },
 
 ]
-    const backgroundImageProjects = {
-        backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)),url('/img/bg_projects5.jpg')`,
-        backgroundSize: "cover",
-        backgroundAttachment: "fixed",
-        height: "250px",
-    };
+const backgroundImageProjects = {
+    backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)),url('/img/bg_projects5.jpg')`,
+    backgroundSize: "cover",
+    backgroundAttachment: "fixed",
+    height: "250px",
+};
 
 const HexagonalGalery = () => {
 
 
 
     return (
-        <section className='main'>
-            <div className='hex'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
+        <section className='container max-w-[1300px] m-auto'>
+            <div className=' grid gap-10 content-center justify-items-center '>
+                <div className='flex'>
+                    <div className='paralelogramo bg-[#8adbed] '>
+                        <Image src={'/img/mockup/mockup_3.png'} alt={''} width={2000} height={1000} />
+                    </div>
+                    <div className='paralelogramo2 bg-[#8adbed] p-3 rotado'>
+                        <Image src={'/img/mockup/mockup_4.png'} alt={''} width={2000} height={1000} />
                     </div>
                 </div>
-            </div>
-            <div className='hex top2'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
+                <div className='flex'>
+                    <div className='paralelogramo bg-[#8adbed] '>
+                        <Image src={'/img/mockup/mockup_3.png'} alt={''} width={1000} height={1000} />
+                    </div>
+                    <div className='paralelogramo2 bg-[#8adbed] p-3 rotado '>
+                        <Image src={'/img/mockup/mockup_4.png'} alt={''} width={1000} height={1000} />
                     </div>
                 </div>
-
-            </div>
-            <div className='hex top3'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top3'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex hex-offset top1 top2'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top3'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top1 top2'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top1'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top1'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top1 top2'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top1 top3'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex top1 top3'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-            <div className='hex'>
-                <div className='hexagon gallery-item'>
-                    <div className='in1'>
-                        <div className='in2' style={backgroundImageProjects}>
-                            <div>
-                                <Link href={'/img/mockup/mockup_1.png'} rel='lightbox' className='fa fa-expand'></Link>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
             </div>
         </section>
     )
