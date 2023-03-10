@@ -25,7 +25,7 @@ const Portafolio = () => {
                     </section>
 
 
-                    <FlechasGaleria/>
+                    <HexagonalGalery/>
                 </main>
             </Layout>
         </div>

@@ -143,7 +143,7 @@ const ServiciosPopulares = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="basis-1/2" data-aos='slide-left'>
+                        <div className="basis-1/2" >
                             <Lottie
 
                                 href={
@@ -186,7 +186,7 @@ const ServiciosPopulares = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="basis-1/2" data-aos='slide-left'>
+                        <div className="basis-1/2" >
                             <Lottie
                                 href={
                                     "https://assets10.lottiefiles.com/packages/lf20_tiulipe2.json"
@@ -218,7 +218,7 @@ const ServiciosPopulares = () => {
                                 </ul>
                             </div>
                         </div>
-                        <div className="basis-1/2" data-aos='slide-left'>
+                        <div className="basis-1/2" >
                             <Lottie
                                 href={
                                     "https://assets7.lottiefiles.com/packages/lf20_TcCqq5PWDu.json"
@@ -240,7 +240,7 @@ const ServiciosPopulares = () => {
                                 </p>
                             </div>
                         </div>
-                        <div className="basis-1/2" data-aos='slide-left'>
+                        <div className="basis-1/2" >
                             <Lottie
                                 href={
                                     "https://assets2.lottiefiles.com/packages/lf20_bewdaxyv.json"
