@@ -9,22 +9,33 @@ const mockups = [
         name: "Autolavado Exprés",
         href: "https://autolavadoexpres.es/",
         image: "/img/portafolio/portafolio_1.png",
+        descripcion: 'Página web'
     },
     {
         name: "Óptica Hristovi",
         href: "#",
         image: "/img/portafolio/portafolio_2.png",
+        descripcion: 'Página web'
     },
     {
         name: "Óptica Hristovi",
         href: "#",
-        image: "/img/portafolio/portafolio_1.png",
+        image: "/img/mockup/mockup_1.png",
+        descripcion: 'Página web'
     },
     {
         name: "Óptica Hristovi",
         href: "#",
-        image: "/img/portafolio/portafolio_2.png",
+        image: "/img/mockup/mockup_2.png",
+        descripcion: 'Página web'
     },
+    {
+        name: "Óptica Hristovi",
+        href: "#",
+        image: "/img/mockup/mockup_1.png",
+        descripcion: 'Página web'
+    },
+
 ];
 
 const HexagonalGalery = () => {
@@ -45,9 +56,9 @@ const HexagonalGalery = () => {
             setClickImg(newUrl);
             return;
         }
-        
+
         const newIndex = currentIndex + 1;
-     
+
         const newUrl = mockups.filter((item) => {
             return mockups.indexOf(item) === newIndex;
         });
@@ -80,15 +91,22 @@ const HexagonalGalery = () => {
         <div className="container max-w-[1300px] m-auto grid lg:grid-cols-2 content-center justify-items-center gap-5">
             {mockups.map((item, index) => (
 
-                <div key={index} className={`bloqueado cursor-pointer hex ${index%3===0 && 'lg:col-span-2'} `}>
+                <div key={index} className={`relative cursor-pointer hex ${index % 3 === 0 && 'lg:col-span-2'}`}>
                     <Image
+                    className=""
                         src={item.image}
                         width={400}
                         height={400}
                         alt={`Imagen Galeria ${item.name}`}
                         onClick={() => handleClickImage(item, index)}
                     />
-                    <h2>{item.name}</h2>
+                    <div className=" absolute left-0 top-0 w-full h-full flex justify-center items-center opacity-100 lg:opacity-0 transition duration-500 hover:opacity-100" onClick={() => handleClickImage(item, index)}>
+                        <div className="bg-[#383737bd] w-full py-2">
+                            <h2 className=" text-2xl lg:text-3xl text-white uppercase text-center ">{item.name}</h2>
+                            <p className=" text-xl text-gray-300 text-center">Tipo: {item.descripcion}</p>
+                        </div>
+                    </div>
+
                 </div>
             ))}
             {clickedImg && (

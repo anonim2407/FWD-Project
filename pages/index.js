@@ -2,13 +2,11 @@ import Image from "next/image";
 import { useEffect, useState } from "react";
 
 import Layout from "@/layout/Layout";
-import Cards from "@/components/Cards";
-
 import Cercle from "@/components/Cercle";
 
 import Aos from "aos";
 import "aos/dist/aos.css";
-import { Link } from "react-scroll";
+
 import ServiciosPopulares from "@/components/ServiciosPopulares";
 import SliderComponent from "@/components/GaleryProjects";
 import BtnRed from "@/components/BtnRed";

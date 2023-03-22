@@ -10,13 +10,13 @@ const Modal = ({ clickedImg, handleRotationRight,handleRotationLeft, setClickImg
   return (
     <div className="dismiss fixed z-[100] top-0 left-0 right-0 w-full h-full bg-[#000000c5] flex items-center " onClick={handleClick}>
       <Image
-      className=" block max-w-[60%] max-h-[80%] my-0 mx-auto shadow-sm"
+      className=" block lg:max-w-[60%] lg:max-h-[80%] my-0 mx-auto shadow-sm"
         src={clickedImg}
         width={2000}
         height={2000}
         alt={`Imagen Galeria ${clickedImg.name}`}
       />
-      <span className="dismiss absolute top-20 right-20 text-3xl text-white z-[100] cursor-pointer">X</span>
+      <span className="dismiss absolute top-10 lg:top-20 right-10 lg:right-20 text-3xl text-white z-[100] cursor-pointer">X</span>
       <div onClick={handleRotationLeft} className={'overlay-arrows_right'}>
         <Image
           src={'/img/iconos/next.png'}

@@ -2,7 +2,7 @@ import Lottie from "@/helpers/Lottie";
 import Layout from "@/layout/Layout";
 import HeaderComponents from "@/components/HeaderComponents";
 import HexagonalGalery from "@/components/HexagonalGalery";
-import FlechasGaleria from "@/components/FlechasGaleria";
+
 const Portafolio = () => {
 
     return (

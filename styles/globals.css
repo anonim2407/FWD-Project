@@ -184,8 +184,8 @@
     -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
   overflow: hidden;
-
-  filter: brightness(0.6);
+/* 
+  filter: brightness(1); */
   transition: all 1s ease-in-out;
   }
 
@@ -225,10 +225,10 @@
   }
 
 
-  .hex:hover {
-    filter: brightness(1);
+  /* .hex:hover {
+    filter: brightness(0.6);
   }
-
+ */
 
 
 
