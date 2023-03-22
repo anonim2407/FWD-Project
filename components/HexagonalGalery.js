@@ -91,7 +91,7 @@ const HexagonalGalery = () => {
         <div className="container max-w-[1300px] m-auto grid lg:grid-cols-2 content-center justify-items-center gap-5">
             {mockups.map((item, index) => (
 
-                <div key={index} className={`relative cursor-pointer hex ${index % 3 === 0 && 'lg:col-span-2'}`}>
+                <div key={index} className={`relative cursor-pointer hex ${index % 3 === 0 && 'lg:col-span-2'}  `}>
                     <Image
                     className=""
                         src={item.image}
