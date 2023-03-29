@@ -2,12 +2,20 @@ import Layout from "@/layout/Layout"
 import HeaderComponents from "@/components/HeaderComponents"
 const SobreNosotros = () => {
   return (
-    <div>
+    <>
       <Layout>
-<HeaderComponents title={'Sobre Nosotros'} image={'https://assets2.lottiefiles.com/packages/lf20_ljotbiif.json'}/>
-        <h1 className="mt-[200px]">Diseño de pagina tipo One Page</h1>
+        <HeaderComponents title={'Sobre Nosotros'} image={'https://assets2.lottiefiles.com/packages/lf20_ljotbiif.json'} />
+
+
+        <main>
+          <div className="container m-auto max-w-[1300px] ">
+            <h1 className="mt-[000px]">Diseño de pagina tipo One Page</h1>
+            <p>Hoooola
+            </p>
+          </div>
+        </main>
       </Layout>
-    </div>
+    </>
   )
 }
 

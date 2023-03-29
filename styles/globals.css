@@ -55,8 +55,8 @@
     top: 0;
     margin-left: 10px;
     fill: none;
-    stroke-linecap: round;
-    stroke-linejoin: round;
+    strokeLinecap: round;
+    strokeLinejoin: round;
     stroke: #234567;
     stroke-width: 2;
     transform: translateX(-5px);

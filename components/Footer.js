@@ -4,7 +4,7 @@ import Image from "next/image";
 const Footer = () => {
   return (
     <footer className=" mt-20  backdrop-blur-[8px]  bg-[#ffffff6e] transition-all duration-500">
-      <div className="container m-auto max-w-[1300px] px-2 py-10">
+      <div className="container m-auto max-w-[1300px] px-4 py-10">
         <div className="flex flex-col-reverse lg:flex-row">
           <div className=" basis-2/3 grid gap-10 md:grid-cols-2 justify-center content-center lg:justify-items-start  lg:content-around" >
 
@@ -27,10 +27,10 @@ const Footer = () => {
               </div>
             <div className="flex flex-col gap-4 text-center lg:text-left">
               <h2 className="text-xl font-bold leading-6 text-black">¿Tienes una pregunta?</h2>
-              <h3 className="text-gray-600  font-semibold">Hablanos a travez del siguiente telefono:</h3>
+              <h3 className="text-gray-600  font-semibold">Hablanos a travez del siguiente teléfono:</h3>
               <Link className="text-gray-600  transition duration-300 hover:text-[#f0c187]" type="tel" href={'tel: +34658467934'}>(+34) 658 46 79 34</Link>
-              <h3 className="text-gray-600 font-semibold">Hablanos a travez del siguiente telefono:</h3>
-              <Link className="text-gray-600  transition duration-300 hover:text-[#f0c187]" type="mailto" href={'mailto: kiril.kk2002@gmail.com'}>(+34) correo@correo.com</Link>
+              <h3 className="text-gray-600 font-semibold">Escribenos a travez del siguiente correo electrónico:</h3>
+              <Link className="text-gray-600  transition duration-300 hover:text-[#f0c187]" type="mailto" href={'mailto: kiril.kk2002@gmail.com'}>correo@correo.com</Link>
             </div>
 
             <div className="text-center lg:text-left">

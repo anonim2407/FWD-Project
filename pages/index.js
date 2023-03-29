@@ -26,7 +26,7 @@ export default function Home() {
     backgroundImage: `linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.0)),url('/img/bg_projects5.jpg')`,
     backgroundSize: "cover",
     backgroundAttachment: "fixed",
-    height: "auto",
+    
   };
 
   return (
@@ -50,7 +50,7 @@ export default function Home() {
         <div className="grid min-h-screen overflow-hidden place-items-center relative ">
           <div className=" h-screen w-screen flex justify-center items-center ">
             <div className="wave"></div>
-            <div className="container px-2 m-auto ">
+            <div className="container px-4 m-auto ">
               <div className="flex flex-col lg:flex-row gap-16 justify-between items-center">
                 <div className=" text-[150px] lg:text-[450px] font-extrabold z-0 animate__animated  animate__bounceInLeft relative  ">
                   <span
@@ -73,7 +73,7 @@ export default function Home() {
           </div>
         </div>
 
-        <section className=" px-2 my-[100px]  flex justify-center items-center ">
+        <section className=" px-4 my-[100px]  flex justify-center items-center ">
           <div className=" container max-w-[1300px] m-auto bg-[#ffffff67] backdrop-blur-[5px] rounded-2xl p-8">
             <div className="flex flex-col lg:flex-row justify-center items-center">
               <div className="basis-1/2">
@@ -130,7 +130,7 @@ export default function Home() {
           </div>
         </section>
         <section>
-          <div className=" container  m-auto max-w-[1300px] px-2 ">
+          <div className=" container  m-auto max-w-[1300px] px-4 ">
             <h2 className="text-4xl font-bold text-[#f0c187] text-center mt-20">
               Nuestros paquetes de diseño web listos{" "}
             </h2>

@@ -98,7 +98,7 @@ export default function HeaderPrueba() {
                         onClick={() => setMobileMenuOpen(true)}
                     >
                         <span className="sr-only">Open main menu</span>
-                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />  
+                        <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
                 <Popover.Group className="hidden lg:flex lg:gap-x-12">
@@ -128,7 +128,7 @@ export default function HeaderPrueba() {
                                                 key={item.name}
                                                 className="group relative flex items-center gap-x-6 rounded-lg p-4 text-sm leading-6 hover:bg-gray-50"
                                             >
-                                                
+
                                                 <div className="flex h-11 w-11 flex-none items-center justify-center rounded-lg bg-gray-50 group-hover:bg-white">
                                                     <Image className=' rounded-md' src={item.icon} width={50} height={50} alt={item.name} />
                                                 </div>
@@ -152,8 +152,8 @@ export default function HeaderPrueba() {
 
 
                                                 </div>
-                                               
-                                            </div> 
+
+                                            </div>
                                         </>
 
 
@@ -172,9 +172,9 @@ export default function HeaderPrueba() {
                     <Link href="/portafolio" className="text-lg font-semibold leading-6 text-gray-900    transition duration-300 hover:text-[#f0c187]">
                         Portafolio
                     </Link>
-                    <Link href="/sobre-nosotros" className="text-lg font-semibold leading-6 text-gray-900    transition duration-300 hover:text-[#f0c187]">
+                    {/* <Link href="/sobre-nosotros" className="text-lg font-semibold leading-6 text-gray-900    transition duration-300 hover:text-[#f0c187]">
                         Sobre Nosotros
-                    </Link>
+                    </Link> */}
                     <Link href="/contacto" className="text-lg font-semibold leading-6 text-gray-900    transition duration-300 hover:text-[#f0c187]">
                         Contacto
                     </Link>
@@ -276,12 +276,12 @@ export default function HeaderPrueba() {
                                 >
                                     Portfolio
                                 </Link>
-                                <Link
+                                {/* <Link
                                     href="/sobre-nosotros"
                                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50    transition duration-300 hover:text-[#f0c187]"
                                 >
                                     Sobre Nosotros
-                                </Link>
+                                </Link> */}
                                 <Link
                                     href="/contacto"
                                     className="-mx-3 block rounded-lg py-2 px-3 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50    transition duration-300 hover:text-[#f0c187]"

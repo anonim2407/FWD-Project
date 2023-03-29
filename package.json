@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@headlessui/react": "^1.7.12",
     "@heroicons/react": "^2.0.16",
     "@lottiefiles/lottie-interactivity": "^1.6.2",
@@ -16,6 +17,7 @@
     "@next/font": "13.1.6",
     "animate.css": "^4.1.1",
     "aos": "^2.3.4",
+    "emailjs": "^4.0.1",
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "heroicons": "^2.0.16",

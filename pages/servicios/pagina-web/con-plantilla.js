@@ -4,8 +4,10 @@ import Layout from '@/layout/Layout'
 
 function DiseñoConPlantilla() {
   return (
-    <div><Layout>
-    </Layout></div>
+    <div>
+      <Layout>
+      </Layout>
+    </div>
   )
 }
 

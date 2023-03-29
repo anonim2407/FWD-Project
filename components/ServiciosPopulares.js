@@ -24,7 +24,7 @@ const ServiciosPopulares = () => {
 
 
 
-        <section className="container m-auto max-w-[1300px] mt-[200px] display flex flex-col gap-2 justify-center items-center my-20 min-h-screen px-2 ">
+        <section className="container m-auto max-w-[1300px] mt-[200px] display flex flex-col gap-2 justify-center items-center my-20 min-h-screen px-4 ">
             <div className="text-4xl font-bold text-[#f0c187] ">
                 <h2 className="text-center">Nuestros servicios mas populares</h2>
             </div>

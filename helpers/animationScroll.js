@@ -16,17 +16,17 @@ import { useEffect } from 'react'
 
 
 
-  useEffect(() => {
-    Aos.init({
-      offset: 200,
-      duration: 600,
-      easing: 'ease-in-sine',
-      delay: 100,
-    })
-  }, [])
+useEffect(() => {
+  Aos.init({
+    offset: 200,
+    duration: 600,
+    easing: 'ease-in-sine',
+    delay: 100,
+  })
+}, [])
 
 
-export default animationScroll
+
 
 
 
