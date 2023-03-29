@@ -19,7 +19,7 @@ const FormularioContacto = () => {
     const [errorMensaje, setErrorMensaje] = useState(false);
     const [errorCheck, setErrorChech] = useState(false)
 
-    const [enviado, setEnviado] = useState(false);
+    const [comprovado, setComprovado] = useState(false);
 
     const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
@@ -79,23 +79,31 @@ const FormularioContacto = () => {
                 !errorMensaje &&
                 check
             ) {
-                emailjs.sendForm('service_uhb896s', 'template_vqskj16', e.target, 'MmCJ5RZxwPk3aX7kk')
-                    .then((result) => {
-                        console.log(result.text);
-                    }, (error) => {
-                        console.log(error.text);
-                    });
 
-                alert('Formulario Enviado Correctamente')
-                setNombre('')
-                setCorreo('')
-                setTelefono('')
-                setTema('')
-                setMensaje('')
-                setCheck(false)
+                setComprovado(true)
 
+            } else {
+                setComprovado(false)
             }
         }, 1000);
+
+        if (comprovado) {
+            emailjs.sendForm('service_uhb896s', 'template_vqskj16', e.target, 'MmCJ5RZxwPk3aX7kk')
+                .then((result) => {
+                    console.log(result.text);
+                }, (error) => {
+                    console.log(error.text);
+                });
+
+            alert('Formulario Enviado Correctamente')
+            setNombre('')
+            setCorreo('')
+            setTelefono('')
+            setTema('')
+            setMensaje('')
+            setCheck(false)
+
+        }
 
     };
 
