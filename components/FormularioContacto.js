@@ -69,31 +69,34 @@ const FormularioContacto = () => {
 
 
         //ENVIO DEL FORMULARIO UNA VEZ VALIDADO
-        if (
-            !errorVacio &&
-            !errorNombre &&
-            !errorCorreo &&
-            !errorTelefono &&
-            !errorTema &&
-            !errorMensaje &&
-            check
-        ) {
-            emailjs.sendForm('service_uhb896s', 'template_vqskj16', e.target, 'MmCJ5RZxwPk3aX7kk')
-                .then((result) => {
-                    console.log(result.text);
-                }, (error) => {
-                    console.log(error.text);
-                });
+        setTimeout(() => {
+            if (
+                !errorVacio &&
+                !errorNombre &&
+                !errorCorreo &&
+                !errorTelefono &&
+                !errorTema &&
+                !errorMensaje &&
+                check
+            ) {
+                emailjs.sendForm('service_uhb896s', 'template_vqskj16', e.target, 'MmCJ5RZxwPk3aX7kk')
+                    .then((result) => {
+                        console.log(result.text);
+                    }, (error) => {
+                        console.log(error.text);
+                    });
 
-            alert('Formulario Enviado Correctamente')
-            setNombre('')
-            setCorreo('')
-            setTelefono('')
-            setTema('')
-            setMensaje('')
-            setCheck(false)
-            
-        }
+                alert('Formulario Enviado Correctamente')
+                setNombre('')
+                setCorreo('')
+                setTelefono('')
+                setTema('')
+                setMensaje('')
+                setCheck(false)
+
+            }
+        }, 1000);
+
     };
 
     const handleChangeCheck = () => {
