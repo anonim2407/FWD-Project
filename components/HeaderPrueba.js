@@ -65,7 +65,7 @@ const products = [
 
         ]
         ,
-        icon: '/img/iconos/icon-Ceo.gif',
+        icon: '/img/iconos/icon-ceo.gif',
         price: 500
     },
 ]
