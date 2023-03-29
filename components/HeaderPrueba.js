@@ -24,7 +24,7 @@ const products = [
             { texto: 'Diseño tipo One Page (una página)', href: '/servicios/pagina-web/tipo-onepage' },
         ]
         ,
-        icon: '/img/icon-site.gif',
+        icon: '/img/iconos/icon-site.gif',
         price: 300
     },
     {
@@ -38,7 +38,7 @@ const products = [
 
         ]
         ,
-        icon: '/img/icon-shop.gif',
+        icon: '/img/iconos/icon-shop.gif',
         price: 500
     },
     {
@@ -52,7 +52,7 @@ const products = [
             { texto: 'Haz una consulta', href: '#' },
         ]
         ,
-        icon: '/img/icon-special.gif',
+        icon: '/img/iconos/icon-special.gif',
         price: 500
     },
     {
@@ -65,7 +65,7 @@ const products = [
 
         ]
         ,
-        icon: '/img/icon-Ceo.gif',
+        icon: '/img/iconos/icon-Ceo.gif',
         price: 500
     },
 ]
