@@ -11,83 +11,90 @@ const FormularioContacto = () => {
     const [mensaje, setMensaje] = useState("");
     const [check, setCheck] = useState(false);
 
-    const [errorVacio, setErrorVacio] = useState(false);
-    const [errorNombre, setErrorNombre] = useState(false);
-    const [errorCorreo, setErrorCorreo] = useState(false);
-    const [errorTelefono, setErrorTelefono] = useState(false);
-    const [errorTema, setErrorTema] = useState(false);
-    const [errorMensaje, setErrorMensaje] = useState(false);
-    const [errorCheck, setErrorChech] = useState(false)
 
-    const [comprovado, setComprovado] = useState(false);
+
+    const [errorNombre, setErrorNombre] = useState(null);
+    const [errorCorreo, setErrorCorreo] = useState(null);
+    const [errorTelefono, setErrorTelefono] = useState(null);
+    const [errorMensaje, setErrorMensaje] = useState(null);
+    const [errorCheck, setErrorChech] = useState(null)
+
 
     const validEmail = /^\w+([.-_+]?\w+)*@\w+([.-]?\w+)*(\.\w{2,10})+$/;
 
+
+
+    function validarNombre(nombre) {
+        if (!nombre) {
+            return "El nombre es requerido"
+        }
+        if (nombre.split(" ").length != 2) {
+            return "El nombre está incompleto";
+        }
+        return null;
+    }
+
+    function validarCorreo(correo) {
+        if (!correo) {
+            return "El correo es requerido";
+        }
+        if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(correo)) {
+            return "El email no es válido";
+        }
+        return null;
+    }
+
+    function validarMensaje(mensaje) {
+        const mensajeLimpio = mensaje.replace(/\s+/g, "");
+        if (!mensaje) {
+            return "El mensaje es requerido"
+        }
+        if (mensajeLimpio.length < 40) {
+            return "Describe un poco mas su consulta";
+        }
+        return null;
+    }
+
+    function validarTelefono(telefono) {
+        if (isNaN(parseInt(telefono))) {
+            return "El telefono no es válido"
+        }
+        return null;
+    }
+
+    function validarCheck(check) {
+        if (!check) {
+            return "Marque la casilla de aceurdo con la politica de privacidad"
+        }
+        return null
+    }
+
+
+
+
     const handleSubmit = (e) => {
         // VALIDACION DEL FORMULARIO
-
         e.preventDefault();
+        const nombreError = validarNombre(nombre)
+        const correoError = validarCorreo(correo)
+        const telefonoError = validarTelefono(telefono)
+        const mensajeError = validarMensaje(mensaje)
+        const checkError = validarCheck(check)
 
-        if ([nombre, correo, tema, mensaje].includes("")) {
-            setErrorVacio(true);
-        } else {
-            setErrorVacio(false);
-        }
+        setErrorNombre(nombreError);
+        setErrorCorreo(correoError);
+        setErrorTelefono(telefonoError)
+        setErrorMensaje(mensajeError);
+        setErrorChech(checkError)
 
-        if (nombre.split(" ").length != 2) {
-            setErrorNombre(true);
-        } else {
-            setErrorNombre(false);
-        }
+        if (
 
-        if (!validEmail.test(correo)) {
-            setErrorCorreo(true);
-        } else {
-            setErrorCorreo(false);
-        }
-
-        if (isNaN(parseInt(telefono))) {
-            setErrorTelefono(true);
-        } else {
-            setErrorTelefono(false);
-        }
-
-        const mensajeLimpio = mensaje.replace(/\s+/g, "");
-        if (mensajeLimpio.length < 40) {
-            setErrorMensaje(true);
-        } else {
-            setErrorMensaje(false);
-        }
-
-        if (!check) {
-            setErrorChech(true)
-        } else {
-            setErrorChech(false)
-        }
-
-
-
-
-        //ENVIO DEL FORMULARIO UNA VEZ VALIDADO
-        setTimeout(() => {
-            if (
-                !errorVacio &&
-                !errorNombre &&
-                !errorCorreo &&
-                !errorTelefono &&
-                !errorTema &&
-                !errorMensaje &&
-                check
-            ) {
-
-                setComprovado(true)
-
-            } else {
-                setComprovado(false)
-            }
-        }, 1000);
-
-        if (comprovado) {
+            !nombreError &&
+            !correoError &&
+            !telefonoError &&
+            !mensajeError &&
+            !checkError
+        ) {
             emailjs.sendForm('service_uhb896s', 'template_vqskj16', e.target, 'MmCJ5RZxwPk3aX7kk')
                 .then((result) => {
                     console.log(result.text);
@@ -95,7 +102,7 @@ const FormularioContacto = () => {
                     console.log(error.text);
                 });
 
-            alert('Formulario Enviado Correctamente')
+
             setNombre('')
             setCorreo('')
             setTelefono('')
@@ -103,7 +110,17 @@ const FormularioContacto = () => {
             setMensaje('')
             setCheck(false)
 
+            alert('Formulario Enviado Correctamente')
         }
+
+
+        //ENVIO DEL FORMULARIO UNA VEZ VALIDADO
+
+
+
+
+
+
 
     };
 
@@ -119,18 +136,18 @@ const FormularioContacto = () => {
 
             {/* ERRORES DEL FORMULARIO */}
 
-            {errorVacio && (
+            {/* {errorVacio && (
                 <p className=" text-red-600 p-1 w-full text-center border border-1 rounded-lg font-semibold border-red-600 my-2">
-                    Debes rellenar todos los campos obligatorios
+                   errorVacio
                 </p>
-            )}
+            )} */}
 
             <form className=" flex flex-col gap-7" onSubmit={handleSubmit}>
                 {/* Nombre */}
                 <div>
                     {errorNombre && (
                         <p className=" text-red-600 p-1 w-full text-center border border-1 rounded-lg my-1 font-semibold border-red-600 ">
-                            Debes incluir nombre y apellido
+                            {errorNombre}
                         </p>
                     )}
                     <label
@@ -172,7 +189,7 @@ const FormularioContacto = () => {
                 <div>
                     {errorCorreo && (
                         <p className=" text-red-600 p-1 w-full text-center border border-1 rounded-lg font-semibold border-red-600 my-2">
-                            Introduce un correo válido
+                            {errorCorreo}
                         </p>
                     )}
                     <label
@@ -210,7 +227,7 @@ const FormularioContacto = () => {
                 <div>
                     {errorTelefono && (
                         <p className=" text-red-600 p-1 w-full text-center border border-1 rounded-lg font-semibold border-red-600 my-2">
-                            Introduce un número de telefono válido
+                            {errorTelefono}
                         </p>
                     )}
                     <label
@@ -288,7 +305,7 @@ const FormularioContacto = () => {
                 <div>
                     {errorMensaje && (
                         <p className=" text-red-600 p-1 w-full text-center border border-1 rounded-lg font-semibold border-red-600 my-2">
-                            Describe mejor tu pregunta
+                            {errorMensaje}
                         </p>
                     )}
                     <label
@@ -364,3 +381,84 @@ const FormularioContacto = () => {
 };
 
 export default FormularioContacto;
+
+
+
+
+
+
+
+
+// import React, { useState } from "react";
+
+// function Formulario() {
+//     const [nombre, setNombre] = useState("");
+//     const [email, setEmail] = useState("");
+//     const [mensaje, setMensaje] = useState("");
+//     const [nombreError, setNombreError] = useState(null);
+//     const [emailError, setEmailError] = useState(null);
+//     const [mensajeError, setMensajeError] = useState(null);
+
+//     function validarNombre(nombre) {
+//         if (!nombre) {
+//             return "El nombre es requerido";
+//         }
+//         return null;
+//     }
+
+//     function validarEmail(email) {
+//         if (!email) {
+//             return "El email es requerido";
+//         }
+//         if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
+//             return "El email no es válido";
+//         }
+//         return null;
+//     }
+
+//     function validarMensaje(mensaje) {
+//         if (!mensaje) {
+//             return "El mensaje es requerido";
+//         }
+//         return null;
+//     }
+
+//     function handleSubmit(event) {
+//         event.preventDefault();
+//         const nombreError = validarNombre(nombre);
+//         const emailError = validarEmail(email);
+//         const mensajeError = validarMensaje(mensaje);
+//         setNombreError(nombreError);
+//         setEmailError(emailError);
+//         setMensajeError(mensajeError);
+//         if (!nombreError && !emailError && !mensajeError) {
+//         hacer algo con los datos del formulario
+//         }
+//     }
+
+//     return (
+//         <form onSubmit={handleSubmit}>
+//             <div>
+//                 <label htmlFor="nombre">Nombre:</label>
+//                 <input
+//                     id="nombre"
+//                     type="text"
+//                     value={nombre}
+//                     onChange={(event) => setNombre(event.target.value)}
+//                 />
+//                 {nombreError && <div>{nombreError}</div>}
+//             </div>
+//             <div>
+//                 <label htmlFor="email">Email:</label>
+//                 <input
+//                     id="email"
+//                     type="email"
+//                     value={email}
+//                     onChange={(event) => setEmail(event.target.value)}
+//                 />
+//                 {emailError && <div>{emailError}</div>}
+//             </div>
+//             <div>
+//                 <label htmlFor="mensaje">Mensaje:</label>
+//                 <textarea
+
