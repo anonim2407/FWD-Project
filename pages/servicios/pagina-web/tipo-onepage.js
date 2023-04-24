@@ -201,7 +201,7 @@ const TipoOnePage = () => {
             <article className="container max-w-6xl mx-auto py-20 px-4">
               <div className=" space-y-5">
                 <h3 className="text-center text-4xl font-semibold">
-                  Se "acorta" el camino a la conversión
+                  Se &apos;acorta&apos; el camino a la conversión
                 </h3>
                 <p className="text-lg text-center">
                   Una Landing Page bien estructurada y con contenido original
@@ -210,10 +210,10 @@ const TipoOnePage = () => {
                   acción es el elemento principal en la página y su ubicación
                   debe ser estratégica, además de tener un diseño llamativo y un
                   texto persuasivo. Un ejemplo de esto es reemplazar la palabra
-                  genérica "Enviar" por algo más atractivo como "Hablemos". De
+                  genérica &apos;Enviar&apos; por algo más atractivo como &apos;Hablemos&apos;. De
                   igual forma, al vender un producto para perder peso, en vez de
-                  usar el término "Comprar", se puede utilizar una frase más
-                  motivadora como "Quiero perder peso".
+                  usar el término &apos;Comprar&apos;, se puede utilizar una frase más
+                  motivadora como &apos;Quiero perder peso&apos;.
                 </p>
               </div>
 
