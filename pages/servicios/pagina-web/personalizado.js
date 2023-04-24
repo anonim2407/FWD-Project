@@ -14,8 +14,8 @@ const Personalizado = () => {
         <section className="container m-auto max-w-6xl flex justify-center items-center">
           <div className=" py-28   gap-10 flex flex-col md:flex-row-reverse items-center">
             <div className="text-left grid gap-5  lg:text-left basis-1/2">
-              <h1 className="text-center md:text-left font-extrabold text-5xl md:text-6xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#aa9479dc] to-[#f0c187]">
-                Diseño individual
+              <h1 className="text-center md:text-left font-extrabold text-5xl md:text-6xl tracking-wider  bg-gradient-to-r  text-[#f0ba78]">
+                Diseño <span className="subrallado">personalizado</span> 
               </h1>
               <p className="text-lg text-center md:text-left">
                 Un sitio diseñado según tus criterios. Un diseño individual para

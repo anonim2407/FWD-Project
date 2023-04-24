@@ -117,6 +117,7 @@ const Servicios = () => {
                     src={"/img/iconos/icon-brand.png"}
                     width={68}
                     height={68}
+                    alt="Imagen icono brand"
                   />
                   <div>
                     <h3>Identidad de marca</h3>
@@ -131,10 +132,11 @@ const Servicios = () => {
                     src={"/img/iconos/icon-optimization.png"}
                     width={68}
                     height={68}
+                    alt="Imagen icono optimización"
                   />
                   <div>
                     <h3>Identidad de marca</h3>
-                    <p className=" ">
+                    <p >
                       Hacemos identidades de marca que transmite un mensaje
                       claro.
                     </p>
