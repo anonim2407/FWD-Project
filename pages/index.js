@@ -74,7 +74,7 @@ export default function Home() {
         </div>
 
         <section className=" px-4 my-[100px]  flex justify-center items-center ">
-          <div className=" container max-w-[1300px] m-auto bg-[#ffffff67] backdrop-blur-[5px] rounded-2xl p-8">
+          <div className=" container max-w-6xl m-auto bg-[#ffffff67] backdrop-blur-[5px] rounded-2xl p-8">
             <div className="flex flex-col lg:flex-row justify-center items-center">
               <div className="basis-1/2">
                 <Image
@@ -89,7 +89,7 @@ export default function Home() {
                 <h2 className=" text-4xl font-bold text-[#f0c187]">
                   Diseño web y marketing
                 </h2>
-                <p className=" text-lg my-5 text-justify">
+                <p className=" text-lg my-5 ">
                   Ofrecemos{" "}
                   <span className="font-semibold">
                     desarrollo de sitios web
@@ -99,7 +99,7 @@ export default function Home() {
                   Nuestro objetivo principal es ayudar a nuestros clientes a
                   crear sitios y experiencias digitales centradas en el usuario.
                 </p>
-                <p className=" text-lg my-5 text-justify">
+                <p className=" text-lg my-5 ">
                   Un sitio web correctamente diseñado atrae, involucra y
                   convierte a clientes potenciales. Utilizamos estrategias
                   prácticas de marketing digital para lograrlo. Diseñamos sitios
@@ -113,7 +113,7 @@ export default function Home() {
 
         <ServiciosPopulares />
         <section className="" style={backgroundImageProjects}>
-          <div className="container m-auto max-w-[1300px] w-[100vw] text-center p-8  py-10">
+          <div className="container m-auto max-w-6xl w-[100vw] text-center p-8  py-10">
             <h2 className="text-4xl font-bold text-[#f0c187] my-7 ">
               Portafolio
             </h2>
@@ -129,8 +129,8 @@ export default function Home() {
             <BtnRed text={"Ir hacia Portafolio"} href='#' />
           </div>
         </section>
-        <section>
-          <div className=" container  m-auto max-w-[1300px] px-4 ">
+        <section className="mb-20">
+          <div className=" container  m-auto max-w-6xl px-4 ">
             <h2 className="text-4xl font-bold text-[#f0c187] text-center mt-20">
               Nuestros paquetes de diseño web listos{" "}
             </h2>
@@ -184,7 +184,7 @@ export default function Home() {
 
             <div className="p-4 w-full hover:scale-105 duration-500 text-center">
               <div className=" p-4 rounded-2xl backdrop-blur-md  bg-[#ffffffbb] shadow-[#62afd070] shadow-md transition duration-500 hover:shadow-[#85ffbd] ">
-                <div className="flex justify-between items-center">
+                <div className="flex flex-col md:flex-row justify-between items-center">
                   <div className="flex flex-col  justify-start items-start basis-2/3">
                     <h2 className="text-gray-900 text-2xl text-left font-bold">
                       Oferta individual

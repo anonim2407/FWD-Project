@@ -8,7 +8,7 @@ const SobreNosotros = () => {
 
 
         <main>
-          <div className="container m-auto max-w-[1300px] ">
+          <div className="container m-auto max-w-6xl ">
             <h1 className="mt-[000px]">Diseño de pagina tipo One Page</h1>
             <p>Hoooola
             </p>

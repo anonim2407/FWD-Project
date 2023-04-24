@@ -3,8 +3,8 @@ import Link from "next/link";
 import Image from "next/image";
 const Footer = () => {
   return (
-    <footer className=" mt-20  backdrop-blur-[8px]  bg-[#ffffff6e] transition-all duration-500">
-      <div className="container m-auto max-w-[1300px] px-4 py-10">
+    <footer className="  backdrop-blur-[8px]  bg-[#ffffff6e] transition-all duration-500">
+      <div className="container m-auto max-w-6xl px-4 py-10">
         <div className="flex flex-col-reverse lg:flex-row">
           <div className=" basis-2/3 grid gap-10 md:grid-cols-2 justify-center content-center lg:justify-items-start  lg:content-around" >
 

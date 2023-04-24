@@ -6,7 +6,7 @@ const Contacto = () => {
   return (
     <div>
       <Layout>
-        <div className="container m-auto max-w-[1300px] min-h-screen pt-36  px-4 text-center  md:text-left">
+        <div className="container m-auto max-w-6xl min-h-screen pt-36  px-4 text-center  md:text-left">
           <div className=' grid gap-10 md:grid-cols-3 content-center çjustify-items-stretch'>
 
             <div className='flex flex-col gap-6'>

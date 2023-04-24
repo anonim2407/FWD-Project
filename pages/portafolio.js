@@ -9,9 +9,9 @@ const Portafolio = () => {
         <div>
             <Layout>
                 <HeaderComponents image={'https://assets8.lottiefiles.com/packages/lf20_w98qte06.json'} title={'Portafolio'} />
-                <main>
+                <main  className="mb-20">
 
-                    <section className="conntainer m-auto max-w-[1300px] px-4  my-20">
+                    <section className="conntainer m-auto max-w-6xl px-4  my-20">
                         <div className="max-w-[700px] m-auto">
                             <p className=" text-center text-lg">
                                 La <span className="font-semibold">buena relación</span> con nuestros clientes es esencial para nosotros.

@@ -4,14 +4,15 @@ import Link from "next/link";
 import Image from "next/image";
 import Cards from "@/components/Cards";
 import CardsServices from "@/components/CardsServices";
+import FormularioContacto from "@/components/FormularioContacto";
 const Servicios = () => {
   return (
     <>
       <Layout>
         <main>
-          <div className="container m-auto max-w-[1300px] px-4 ">
+          <div className="container m-auto max-w-6xl px-4 ">
             <section className=" flex  justify-center items-center">
-              <div className="container m-auto max-w-[1300px] py-28   gap-10 grid md:grid-cols-2 items-center">
+              <div className="container m-auto max-w-6xl py-28   gap-10 grid md:grid-cols-2 items-center">
                 <div className="text-left grid gap-5 text-center lg:text-left">
                   <h1 className="text-center md:text-left font-extrabold text-5xl md:text-6xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#aa9479dc] to-[#f0c187]">
                     Servicios
@@ -31,7 +32,7 @@ const Servicios = () => {
               </div>
             </section>
 
-            <section className="grid md:grid-cols-3 gap-5 content-center justify-items-center">
+            <section className="grid lg:grid-cols-3 gap-5 content-center justify-items-center">
               <Cards
                 img={
                   <svg
@@ -102,12 +103,12 @@ const Servicios = () => {
               />
             </section>
 
-            <section className="flex flex-col md:flex-row mt-14 ">
+            <section className="flex flex-col lg:flex-row mt-14 ">
               <div className=" flex flex-col justify-center gap-10 basis-2/5 ">
-                <h2 className="text-center md:text-left font-bold text-4xl md:text-5xl tracking-wider text-[#aa9479dc] to-[#f0c187]">
+                <h2 className="text-center lg:text-left font-bold text-4xl lg:text-5xl tracking-wider text-[#aa9479dc] to-[#f0c187]">
                   Diseño web y marketing
                 </h2>
-                <p className="  text-center md:text-left ">
+                <p className="  text-center lg:text-left ">
                   Os ofrecemos todos los servicios necesarios para crear un
                   sitio web desde zero, o para rediseñar un sitio existente.{" "}
                 </p>
@@ -119,7 +120,7 @@ const Servicios = () => {
                   />
                   <div>
                     <h3>Identidad de marca</h3>
-                    <p className="  text-justify md:text-left">
+                    <p className="   lg:text-left">
                       Hacemos identidades de marca que transmite un mensaje
                       claro.
                     </p>
@@ -151,9 +152,10 @@ const Servicios = () => {
               <div></div>
             </section>
           </div>
+
           <section className=" grid md:grid-cols-3 xl:grid-cols-6    backdrop-blur-md  bg-[#ffffffcf] shadow-[#62afd070] shadow-2xl transition duration-500 hover:shadow-[#87def0] ">
             <CardsServices
-              href={'#'}
+              href={"#"}
               img={"/img/iconos/icon-webpage.png"}
               bg_color={"bg-[#5EB9C2]"}
               title={"Sitio de la empresa/ negocio"}
@@ -162,50 +164,99 @@ const Servicios = () => {
               }
             />
             <CardsServices
-              href={'#'}
+              href={"#"}
               img={"/img/iconos/icon-ecommercepage.png"}
               bg_color={"bg-[#58CBC0]"}
-              title={"Tienda online"}
+              title={"Tienda online lista"}
               text={
-                "Combinando diseño moderno y una investigacion en profundidad desarrollamos su marca que lo diferencia en la industria y ayuda a hacer crecer su negocio."
+                "Una oferta excelente y económica para el comercio en línea. Un sitio funcional con una apariencia hermosa y sin limitaciones."
               }
             />
             <CardsServices
-              href={'#'}
-              img={"/img/iconos/icon-specialpage.png"}
+              href={"#"}
+              img={"/img/iconos/icon-profecionalpage.png"}
               bg_color={"bg-[#6ADBB3]"}
+              title={"Tienda online PRO"}
+              text={
+                'Una opción funcional aún más rica para una tienda en línea que simplemente "llama" la atención, pero ofrece excelentes herramientas de marketing para ventas exitosas.'
+              }
+            />
+            <CardsServices
+              href={"#"}
+              img={"/img/iconos/icon-specialpage.png"}
+              bg_color={"bg-[#90E99E]"}
               title={"Sitios web especiales"}
               text={
-                "Combinando diseño moderno y una investigacion en profundidad desarrollamos su marca que lo diferencia en la industria y ayuda a hacer crecer su negocio."
+                "Sitio web de hotel, restaurante, pedidos de comida en línea, bienes raíces, plataforma de mercado: ¡podemos ofrecerle casi cualquier cosa."
               }
             />
             <CardsServices
-              href={'#'}
+              href={"#"}
               img={"/img/iconos/icon-seopage.png"}
-              bg_color={"bg-[#90E99E]"}
+              bg_color={"bg-[#C1F385]"}
               title={"Optimización SEO"}
               text={
-                "Combinando diseño moderno y una investigacion en profundidad desarrollamos su marca que lo diferencia en la industria y ayuda a hacer crecer su negocio."
+                "Su sitio no funcionará lo suficientemente bien para usted si no es detectable. Desbloquearemos el potencial de su sitio optimizándolo para los motores de búsqueda."
               }
             />
+
             <CardsServices
-              href={'#'}
-              img={"/img/iconos/icon-profecionalpage.png"}
-              bg_color={"bg-[#C1F385]"}
-              title={"Sitios web profecionales"}
-              text={
-                "Combinando diseño moderno y una investigacion en profundidad desarrollamos su marca que lo diferencia en la industria y ayuda a hacer crecer su negocio."
-              }
-            />
-            <CardsServices
-              href={'#'}
+              href={"#"}
               img={"/img/iconos/icon-onepage.png"}
               bg_color={"bg-[#F9F871]"}
               title={"Sitio de una pàgina"}
               text={
-                "Combinando diseño moderno y una investigacion en profundidad desarrollamos su marca que lo diferencia en la industria y ayuda a hacer crecer su negocio."
+                '"Mucho" no significa "calidad". ¿Ofrecen un tipo de servicio y pueden presentar su negocio en una sola página? ¡Esta opción económica es solo para ti.'
               }
             />
+          </section>
+
+          <section className="container max-w-6xl m-auto px-4 flex flex-col md:flex-row-reverse mt-14 ">
+            <div className=" flex flex-col justify-center gap-10 basis-2/5 ">
+              <h2 className="text-center md:text-left font-bold text-4xl md:text-5xl tracking-wider text-[#aa9479dc] to-[#f0c187]">
+                Diseño individual
+              </h2>
+              <p className="  text-center md:text-left ">
+                ¿Tus necesidades no encajan en ninguno de nuestros paquetes?
+                Envíenos su consulta y le prepararemos una oferta individual.
+              </p>
+              <p className="  text-center md:text-left ">
+                Ya sea que esté interesado en una característica específica o
+                tenga una determinada visión en mente que no encaja en ninguna
+                plantilla, le ofreceremos la opción óptima que se ajuste a un
+                presupuesto adecuado.
+              </p>
+              <Link href="/contacto">
+                    <p className="font-bold  uppercase text-[#ff5c5cbf] transition duration-300 hover:text-[#ff4141]">
+                      &#10596; Hablemos sobre su proyecto
+                    </p>
+                  </Link>
+            </div>
+            <div className="basis-3/5 md:p-20">
+              <Lottie
+                href={
+                  "https://assets10.lottiefiles.com/packages/lf20_2lruogho.json"
+                }
+              />
+            </div>
+
+            <div></div>
+          </section>
+
+          <section className="container max-w-6xl m-auto py-20 px-4 md:px-[15%] ">
+            <div className=" hidden md:block absolute left-0 m-auto w-[500px] mt-[200px]">
+              <Lottie
+                href={
+                  "https://assets6.lottiefiles.com/packages/lf20_iYvSqSMKZB.json"
+                }
+              />
+            </div>
+
+            <div className="text-center font-bold text-4xl my-6">
+              <h2 className="text-[#f0c187]">¿Teneis un proyecto en mente?</h2>
+            </div>
+
+            <FormularioContacto />
           </section>
         </main>
       </Layout>

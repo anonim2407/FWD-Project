@@ -19,7 +19,7 @@ const products = [
         description: 'Solción para cualquier negocio y presupuesto',
         href: '#',
         subdescription: [
-            { texto: 'Diseño con plantilla', href: '/servicios/pagina-web/con-plantilla' },
+            { texto: 'Diseño con plantilla (Proximamente)', href: '#' }, ///servicios/pagina-web/con-plantilla
             { texto: 'Diseño personalizado', href: '/servicios/pagina-web/personalizado' },
             { texto: 'Diseño tipo One Page (una página)', href: '/servicios/pagina-web/tipo-onepage' },
         ]
@@ -32,7 +32,7 @@ const products = [
         description: 'Venta online sin límites',
         href: '#',
         subdescription: [
-            { texto: 'Tienda online hecha', href: '#' },
+            { texto: 'Tienda online hecha (Proximamente)', href: '#' },
             { texto: 'Tienda online PRO', href: '#' },
             { texto: 'Con diseño individual', href: '#' },
 
@@ -84,7 +84,7 @@ export default function HeaderPrueba() {
 
     return (
         <header className={` fixed  left-0 right-0 z-[20] ${scrollDirection === "down" ? "-top-24" : "top-0"} h-20 lg:h-24 backdrop-blur-[8px]  bg-[#ffffff6e] transition-all duration-500`}>
-            <nav className="mx-auto flex max-w-[1300px] items-center justify-between p-6 lg:px-8" aria-label="Global">
+            <nav className="mx-auto flex max-w-6xl items-center justify-between p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
                     <Link href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">Your Company</span>
@@ -138,7 +138,7 @@ export default function HeaderPrueba() {
 
                                                     </div>
                                                     <p className="mt-1 text-gray-600">{item.description}</p>
-                                                    <p>Precio desde <span className=' font-bold'>{item.price} €</span></p>
+                                                    <p>Precios desde <span className=' font-bold'>{item.price} €</span></p>
                                                     <ul className='grid gap-1 -ml-3'>
                                                         {item['subdescription'].map((post) => (
                                                             <li className=' text-blue-800' key={post.href}>
@@ -161,9 +161,9 @@ export default function HeaderPrueba() {
                                     ))}
 
                                 </div>
-                               <div >
-                                <BtnRed  text={'Ver todos los servivios'} href={'/servicios'}/>
-                               </div>
+                                <div >
+                                    <BtnRed text={'Ver todos los servivios'} href={'/servicios'} />
+                                </div>
                             </Popover.Panel>
 
                         </Transition>
@@ -246,7 +246,7 @@ export default function HeaderPrueba() {
 
                                                                 </div>
                                                                 <p className="mt-1 text-gray-600">{item.description}</p>
-                                                                <p>Precio desde <span className=' font-bold'>{item.price} €</span></p>
+                                                                <p>Precios desde <span className=' font-bold'>{item.price} €</span></p>
                                                                 <ul className='grid gap-1 -ml-3'>
                                                                     {item['subdescription'].map((post) => (
                                                                         <li className=' text-blue-800' key={post.id}>
@@ -266,6 +266,9 @@ export default function HeaderPrueba() {
 
 
                                                 ))}
+                                                <div >
+                                                    <BtnRed text={'Ver todos los servivios'} href={'/servicios'} />
+                                                </div>
                                             </Disclosure.Panel>
                                         </>
                                     )}

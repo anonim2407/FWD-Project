@@ -55,8 +55,8 @@
     top: 0;
     margin-left: 10px;
     fill: none;
-    strokeLinecap: round;
-    strokeLinejoin: round;
+    strokelinecap: round;
+    strokelinejoin: round;
     stroke: #234567;
     stroke-width: 2;
     transform: translateX(-5px);
@@ -176,44 +176,55 @@
 
   /* ============ GALERIA HEXAGONAL ==============*/
 
-  .hex {  
-      width: 300px;
-    height: 300px; 
+  .hex {
+    width: 300px;
+    height: 300px;
     box-shadow: 0 0 20px #000000;
     background: rgba(168, 255, 121, 0.641);
-    -webkit-clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-  clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
-  overflow: hidden;
-/* 
+    -webkit-clip-path: polygon(
+      25% 5%,
+      75% 5%,
+      100% 50%,
+      75% 95%,
+      25% 95%,
+      0% 50%
+    );
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    overflow: hidden;
+    /* 
   filter: brightness(1); */
-  transition: all 1s ease-in-out;
+    transition: all 1s ease-in-out;
   }
 
-  .hex img{
+  .hex img {
     object-fit: cover;
     width: 100%;
     height: 100%;
-    
   }
 
   @media (min-width: 768px) {
-      .hex{
-        width: 500px;
-        height: 500px;
-      }
+    .hex {
+      width: 500px;
+      height: 500px;
+    }
   }
-
 
   @media (min-width: 1024px) {
-      .hex{
-        width: 500px;
-        height: 500px;
-        -webkit-clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-        clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
-      }
+    .hex {
+      width: 500px;
+      height: 500px;
+      -webkit-clip-path: polygon(
+        50% 0%,
+        95% 25%,
+        95% 75%,
+        50% 100%,
+        5% 75%,
+        5% 25%
+      );
+      clip-path: polygon(50% 0%, 95% 25%, 95% 75%, 50% 100%, 5% 75%, 5% 25%);
+    }
   }
 
- 
   .hex img {
     scale: 1;
     transition: all 1s ease-in-out;
@@ -224,14 +235,10 @@
     scale: 1.1;
   }
 
-
   /* .hex:hover {
     filter: brightness(0.6);
   }
  */
-
-
-
 
   .wrapper {
     max-width: 1350px;
@@ -241,11 +248,11 @@
     flex-wrap: wrap;
     gap: 2em;
   }
-  
+
   .wrapper img {
     cursor: pointer;
   }
-  
+
   /* modal */
   .overlay {
     position: fixed;
@@ -285,17 +292,17 @@
     left: 0;
     z-index: 999;
   }
-  
+
   .overlay-arrows_left svg {
     width: 50px;
     height: 50px;
   }
-  
+
   .overlay-arrows_right svg {
     width: 50px;
     height: 50px;
   }
-  
+
   .overlay-arrows_right {
     display: flex;
 
@@ -307,14 +314,74 @@
     top: 50%;
     z-index: 999;
   }
-  
 
+  /* SUBRALLADO DE TEXTO */
 
+  .subrallado {
+    position: relative;
+    z-index: 2;
+  }
 
+  .subrallado::before {
+    /* Highlight color */
+    background-color: #86efac;
 
+    content: "";
+    position: absolute;
+    width: calc(100% + 4px);
+    height: 60%;
+    left: -2px;
+    bottom: 0;
+    z-index: -1;
+    transform: rotate(-2deg);
+  }
 
+  /* IMAGEN FLOTANDO */
+  .banner_img2 {
+    animation: movimiento 2s linear infinite;
+  }
 
+  @keyframes movimiento {
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(25px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+  .banner_img3 {
+    animation: movimiento 2.5s linear infinite;
+  }
 
+  @keyframes movimiento {
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(25px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
+  .banner_img {
+    animation: movimiento 3s linear infinite;
+  }
+
+  @keyframes movimiento {
+    0%{
+      transform: translateY(0);
+    }
+    50%{
+      transform: translateY(25px);
+    }
+    100%{
+      transform: translateY(0);
+    }
+  }
 }
 
 /*#cfbba3  #e6d0af*/

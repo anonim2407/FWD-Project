@@ -24,7 +24,7 @@ const ServiciosPopulares = () => {
 
 
 
-        <section className="container m-auto max-w-[1300px] mt-[200px] display flex flex-col gap-2 justify-center items-center my-20 min-h-screen px-4 ">
+        <section className="container m-auto max-w-6xl mt-[200px] display flex flex-col gap-2 justify-center items-center my-20 min-h-screen px-4 ">
             <div className="text-4xl font-bold text-[#f0c187] ">
                 <h2 className="text-center">Nuestros servicios mas populares</h2>
             </div>
@@ -113,7 +113,7 @@ const ServiciosPopulares = () => {
                         }`}
                 >
                     <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4">
-                        <div className="flex flex-col text-justify basis-1/2">
+                        <div className="flex flex-col  basis-1/2">
                             <h2 className="text-3xl my-6 font-bold" >
                                 Diseño web y creación de páginas web
                             </h2>
@@ -158,7 +158,7 @@ const ServiciosPopulares = () => {
                         }`}
                 >
                     <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4">
-                        <div className="flex flex-col text-justify basis-1/2">
+                        <div className="flex flex-col  basis-1/2">
                             <h2 className="text-3xl my-6 font-bold">
                                 Diseño de tienda online
                             </h2>
@@ -200,7 +200,7 @@ const ServiciosPopulares = () => {
                         } `}
                 >
                     <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4">
-                        <div className="flex flex-col text-justify basis-1/2">
+                        <div className="flex flex-col  basis-1/2">
                             <h2 className="text-3xl my-6 font-bold">Optimización de SEO</h2>
                             <div>
                                 <p className="py-4 text-lg">
@@ -232,7 +232,7 @@ const ServiciosPopulares = () => {
                         }`}
                 >
                     <div className="flex flex-col-reverse lg:flex-row justify-center items-center gap-4">
-                        <div className="flex flex-col text-justify basis-1/2">
+                        <div className="flex flex-col  basis-1/2">
                             <h2 className="text-3xl my-6 font-bold">Alojamiento VPS en la nube</h2>
                             <div>
                                 <p className="py-4 text-lg">

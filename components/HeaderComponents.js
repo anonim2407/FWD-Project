@@ -13,7 +13,7 @@ const HeaderComponents = ({image, title}) => {
             style={backgroundImageProjects}
             className=" recorte-fondo flex  justify-center items-center"
         >
-            <div className="container m-auto max-w-[1300px] pt-28 md:pt-0 px-4 flex gap-10 flex-col md:flex-row justify-between items-center ">
+            <div className="container m-auto max-w-6xl pt-28 md:pt-0 px-4 flex gap-10 flex-col md:flex-row justify-between items-center ">
                 <div>
                     <h1 className="text-center md:text-left font-extrabold text-5xl md:text-6xl tracking-wider text-transparent bg-clip-text bg-gradient-to-r from-[#aa9479dc] to-[#f0c187]">{title}</h1>
                 </div>
