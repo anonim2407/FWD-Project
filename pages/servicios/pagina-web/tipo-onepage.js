@@ -201,7 +201,7 @@ const TipoOnePage = () => {
             <article className="container max-w-6xl mx-auto py-20 px-4">
               <div className=" space-y-5">
                 <h3 className="text-center text-4xl font-semibold">
-                  Se &apos;acorta&apos; el camino a la conversión
+                  Se &apos;acorta&apos; el camino a la conversión 
                 </h3>
                 <p className="text-lg text-center">
                   Una Landing Page bien estructurada y con contenido original
